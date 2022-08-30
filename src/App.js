@@ -63,7 +63,7 @@ function App() {
   const [todos, setTodos] = useState(data)
 
   let addTodo = (title,description) => {
-    //
+    //Vi skapar en ny todo med titel, beskrivning samt status.
     let newTodo = {
       title,
       description,
