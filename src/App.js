@@ -80,7 +80,7 @@ function App() {
     //Vi ändrar värdet på det id:et (som är satt till ett index på rad 91)
     allTodos[id].completed = true;
 
-    //
+    //Vi sätter den nya arrayen inklusive ändring till vårt nya state
     setTodos([...allTodos]);
   }
 
@@ -88,6 +88,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <AddTodo addTodo={addTodo}/>
+        {/* Vi loopar ut samtliga todos med dess data + skapar ett id */}
         {todos.map((todo,i) => <Todo title={todo.title} description={todo.description} completed={todo.completed} completeTodo={completeTodo} id={i}/>)}
         
       </header>
